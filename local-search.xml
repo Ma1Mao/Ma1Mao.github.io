@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>开机自动挂载硬盘</title>
+    <link href="/2023/05/28/%E5%BC%80%E6%9C%BA%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD%E7%A1%AC%E7%9B%98/"/>
+    <url>/2023/05/28/%E5%BC%80%E6%9C%BA%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD%E7%A1%AC%E7%9B%98/</url>
+    
+    <content type="html"><![CDATA[<h3 id="开机自动挂载-硬盘-x2F-分区"><a href="#开机自动挂载-硬盘-x2F-分区" class="headerlink" title="开机自动挂载 硬盘&#x2F;分区"></a>开机自动挂载 硬盘&#x2F;分区</h3><h4 id="1-查看当前挂载状态"><a href="#1-查看当前挂载状态" class="headerlink" title="1.查看当前挂载状态"></a>1.查看当前挂载状态</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">df</span> -h<br></code></pre></td></tr></table></figure><h4 id="2-查看硬盘-x2F-分区的UUID并复制下来"><a href="#2-查看硬盘-x2F-分区的UUID并复制下来" class="headerlink" title="2.查看硬盘&#x2F;分区的UUID并复制下来"></a>2.查看硬盘&#x2F;分区的UUID并复制下来</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo blkid /dev/sda1<span class="hljs-comment">#不加设备名就是查看所有分区的UUID</span><br></code></pre></td></tr></table></figure><h4 id="3-修改-x2F-etc-x2F-fstab文件"><a href="#3-修改-x2F-etc-x2F-fstab文件" class="headerlink" title="3.修改&#x2F;etc&#x2F;fstab文件"></a>3.修改&#x2F;etc&#x2F;fstab文件</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo vim /etc/fstab<span class="hljs-comment">#编辑fstab文件</span><br><span class="hljs-comment">#添加以下内容</span><br>UUID=6796AB67FF10D93B/mnt/windowsntfsdefaults<span class="hljs-comment">#将UUID后面更改为需要挂载分区的UUID，/mnt/windows更改为要挂载的位置，ntfs改为要挂载分区的实际格式</span><br></code></pre></td></tr></table></figure><p>或者使用以下命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo <span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;UUID=6796AB67FF10D93B/mnt/windowsntfsdefaults&#x27;</span> &gt;&gt; /etc/fstab<span class="hljs-comment">#需要更改的地方与上面一致，提示权限不足的话就切换到root用户再执行</span><br></code></pre></td></tr></table></figure><h4 id="4-验证是否添加成功"><a href="#4-验证是否添加成功" class="headerlink" title="4.验证是否添加成功"></a>4.验证是否添加成功</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">reboot<span class="hljs-comment">#重启</span><br><span class="hljs-built_in">df</span> -h /dev/sda1<span class="hljs-comment">#查看挂载点</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>我的Git常用命令</title>
     <link href="/2023/05/27/%E6%88%91%E7%9A%84Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
     <url>/2023/05/27/%E6%88%91%E7%9A%84Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
