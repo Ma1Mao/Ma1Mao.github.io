@@ -214,6 +214,72 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/2023/12/08/VMware%E6%8C%82%E8%BD%BD%E8%99%9A%E6%8B%9F%E7%A3%81%E7%9B%98/" target="_self">
+          
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/12/08/VMware%E6%8C%82%E8%BD%BD%E8%99%9A%E6%8B%9F%E7%A3%81%E7%9B%98/" target="_self">
+        <div>
+          VMware挂载虚拟磁盘1.打开VMware,为需要挂载磁盘的虚拟机创建一个虚拟磁盘     ​	设置磁盘容量  ​	设置虚拟磁盘位置和名称  2.格式化磁盘​	 ​	打开终端输入以下命令查看分区,发现能看到我们刚才创建的磁盘，但还没有格式化 1fdisk -l   ​	执行以下命令格式化磁盘 1mkfs -t ext4 /dev/sdb  3.挂载磁盘1234mount /dev/sdb /mn
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-12-08 13:54" pubdate>
+              2023-12-08
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2023/12/08/http%E8%AF%B7%E6%B1%82%E5%A4%B4%E5%93%8D%E5%BA%94%E5%A4%B4%E8%A7%A3%E6%9E%90/" target="_self">
+          
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/12/08/http%E8%AF%B7%E6%B1%82%E5%A4%B4%E5%93%8D%E5%BA%94%E5%A4%B4%E8%A7%A3%E6%9E%90/" target="_self">
+        <div>
+          http请求头响应头解析1.请求头实例： 2.请求头关键点：2.1	GET 2.2	Host 2.3	User-Agent 2.4	Referer 2.5	Cookie 3.响应实例 4.响应头关键点：4.1	HTTP 4.2	Server 4.3	X-Powered 4.4	Content-Length 4.5	Content-Type 4.6	Set-Cookie
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-12-08 13:54" pubdate>
+              2023-12-08
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/2023/05/28/%E5%BC%80%E6%9C%BA%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD%E7%A1%AC%E7%9B%98/" target="_self">
           开机自动挂载硬盘
         </a>
@@ -222,7 +288,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2023/05/28/%E5%BC%80%E6%9C%BA%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD%E7%A1%AC%E7%9B%98/" target="_self">
         <div>
-          开机自动挂载 硬盘&#x2F;分区1.查看当前挂载状态1df -h  2.查看硬盘&#x2F;分区的UUID并复制下来1sudo blkid /dev/sda1	#不加设备名就是查看所有分区的UUID  3.修改&#x2F;etc&#x2F;fstab文件123sudo vim /etc/fstab		#编辑fstab文件#添加以下内容UUID=6796AB67FF10D93B	/mnt/wind
+          开机自动挂载 硬盘&#x2F;分区1.查看当前挂载状态1df -h  2.查看硬盘&#x2F;分区的UUID并复制下来1sudo blkid /dev/sda1	#&quot;/dev/sda1&quot;为你需要查看的设备名，不加设备名就是查看所有分区的UUID  3.修改&#x2F;etc&#x2F;fstab文件123sudo vim /etc/fstab		#编辑fstab文件#添加以下内
         </div>
       </a>
 
